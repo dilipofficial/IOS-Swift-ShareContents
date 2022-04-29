@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  IOS-Swift-ShareContents
 //
-//  Created by Pooya on 2018-06-07.
-//  Copyright © 2018 Pooya. All rights reserved.
+//  Created by Dilip Kumar on 28/04/22.
 //
 
 import UIKit
@@ -17,19 +16,6 @@ class ViewController: UIViewController , UIDocumentInteractionControllerDelegate
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func shareTextBtn(_ sender: Any) {
-        let activityController = UIActivityViewController(activityItems: [stringWithLink], applicationActivities: nil)
-        activityController.completionWithItemsHandler = { (nil, completed, _, error) in
-            if completed {
-                print("Completed!")
-            } else {
-                print("Canceled!!")
-            }
-        }
-        present(activityController , animated: true) {
-            print("Text Presented!")
-        }
-    }
     
     @IBAction func sahreImageBtn(_ sender: Any) {
         guard let image = UIImage(named: "shareMe") else {
@@ -51,7 +37,7 @@ class ViewController: UIViewController , UIDocumentInteractionControllerDelegate
     }
     
     @IBAction func sharePdfBtn(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "sharePdf", withExtension: "pdf") else {
+        guard let url = Bundle.main.url(forResource: "Invoice", withExtension: "pdf") else {
             print("file loading error!")
             return
         }

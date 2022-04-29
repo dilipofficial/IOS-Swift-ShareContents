@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  IOS-Swift-ShareContents
 //
-//  Created by Pooya on 2018-06-07.
-//  Copyright © 2018 Pooya. All rights reserved.
+//  Created by Dilip Kumar on 28/04/22.
 //
 
 import UIKit
